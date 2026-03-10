@@ -302,7 +302,7 @@ async function submitCt(e){
   err.style.display='none';ok.style.display='none';
   var data=new FormData(e.target);
   try{
-    var r=await fetch('https://formspree.io/f/YOUR_FORM_ID',{method:'POST',body:data,headers:{'Accept':'application/json'}});
+    var r=await fetch('https://formspree.io/f/xeerarey',{method:'POST',body:data,headers:{'Accept':'application/json'}});
     if(r.ok){
       e.target.reset();
       ok.style.display='block';
