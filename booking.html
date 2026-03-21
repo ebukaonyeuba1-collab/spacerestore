@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Book a Clean — SpaceRestore</title>
+<meta name="description" content="Book a professional cleaning service with SpaceRestore in Warri and Delta State. Same-day response guaranteed."/>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2307101f'/%3E%3Crect x='1' y='1' width='30' height='30' rx='5' fill='none' stroke='%23c9a84c' stroke-width='1'/%3E%3Ccircle cx='16' cy='13' r='5' fill='%23c9a84c'/%3E%3Cpath d='M8 24c0-4.4 3.6-8 8-8s8 3.6 8 8' fill='%23c9a84c'/%3E%3C/svg%3E"/>
+
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Book a Clean — SpaceRestore"/>
+<meta property="og:description" content="Book a professional cleaning service with SpaceRestore in Warri and Delta State. Same-day response guaranteed."/>
+<meta property="og:site_name" content="SpaceRestore Cleaning Services"/>
+<meta property="og:image" content="https://spacerestore.vercel.app/og-image.jpg"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<script>document.documentElement.classList.remove('no-js')</script>
+<style>
+
+:root {
+  --bg:      #07101f;
+  --bg2:     #0b1727;
+  --bg3:     #101f34;
+  --bg4:     #15243d;
+  --gold:    #c9a84c;
+  --gold-lt: #e8c97a;
+  --gold-dk: #a07c2a;
+  --gold-dim: rgba(201,168,76,.1);
+  --gold-border: rgba(201,168,76,.22);
+  --cream:   #f0ebe0;
+  --text:    rgba(240,235,224,.85);
+  --muted:   rgba(240,235,224,.44);
+  --subtle:  rgba(240,235,224,.14);
+  --green:   #4ab87a;
+  --green-dk:#35905d;
+  --err:     #e05252;
+  --line:    rgba(201,168,76,.13);
+  --f-serif: 'Cormorant Garamond', Georgia, serif;
+  --f-sans:  'Outfit', system-ui, sans-serif;
+  --wrap:    min(1200px, 92vw);
+  --r:       10px;
+  --r-lg:    18px;
+  --ease:    cubic-bezier(.4,0,.2,1);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0 }
+html { scroll-behavior: smooth; background: #07101f }
+body {
+  font-family: var(--f-sans);
+  background: var(--bg);
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1.7;
+  font-weight: 300;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+img { display: block; max-width: 100% }
+a { color: inherit }
+
+/* ── Typography ─────── */
+h1,h2,h3,h4 { font-family: var(--f-serif); font-weight: 400; line-height: 1.15 }
+.display {
+  font-family: var(--f-serif);
+  font-size: clamp(52px, 8.5vw, 96px);
+  font-weight: 300;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  line-height: .95;
+  color: var(--cream);
+}
+.display em { font-style: normal; color: var(--gold) }
+.h1  { font-size: clamp(36px, 5.5vw, 68px) }
+.h2  { font-size: clamp(26px, 3.8vw, 46px); color: var(--cream) }
+.h3  { font-size: clamp(20px, 2.4vw, 28px); color: var(--cream) }
+
+/* label tag */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--f-sans);
+  font-size: 9.5px;
+  font-weight: 400;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.tag::before, .tag::after {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 1px;
+  background: var(--gold);
+  opacity: .5;
+}
+.tag.bare::before, .tag.bare::after { display: none }
+.rule { width: 48px; height: 1px; background: var(--gold); opacity: .45; margin: 14px 0 }
+
+/* ── Layout ─────────── */
+.wrap   { width: var(--wrap); margin: 0 auto }
+.sec    { padding: clamp(80px, 11vw, 130px) 0 }
+.sec-sm { padding: clamp(50px, 7vw, 80px) 0 }
+.hd     { display: flex; flex-direction: column; align-items: flex-start; gap: 14px; margin-bottom: 56px }
+.hd.c   { align-items: center; text-align: center }
+.hd p   { font-size: 15.5px; color: var(--muted); max-width: 520px; line-height: 1.8; font-weight: 300 }
+.grid2  { display: grid; grid-template-columns: 1fr 1fr; gap: 24px }
+.grid3  { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px }
+.grid4  { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px }
+
+/* ── Buttons ─────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 13px 28px;
+  font-family: var(--f-sans);
+  font-size: 10.5px;
+  font-weight: 400;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  border-radius: 2px;
+  transition: all .3s var(--ease);
+  white-space: nowrap;
+}
+.btn-gold   { background: var(--gold); color: var(--bg) }
+.btn-gold:hover   { background: var(--gold-lt); transform: translateY(-2px) }
+.btn-outline { background: transparent; color: var(--gold); border: 1px solid var(--gold-border) }
+.btn-outline:hover { background: var(--gold-dim); border-color: var(--gold) }
+.btn-ghost  { background: transparent; color: var(--text); border: 1px solid var(--subtle) }
+.btn-ghost:hover  { border-color: rgba(240,235,224,.4); background: rgba(240,235,224,.05) }
+.btn-green  { background: var(--green); color: #fff }
+.btn-green:hover  { background: var(--green-dk); transform: translateY(-2px) }
+.btn-sm { padding: 10px 20px; font-size: 9.5px }
+.btn-wide { width: 100%; justify-content: center }
+
+/* ── Nav ─────────────── */
+#nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  height: 68px;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 max(24px, calc((100vw - 1200px)/2));
+  background: transparent;
+  border-bottom: 1px solid transparent;
+  transition: background .4s var(--ease), border-color .4s var(--ease), box-shadow .4s var(--ease);
+}
+#nav.sc {
+  background: rgba(7,16,31,.96);
+  backdrop-filter: blur(24px);
+  border-bottom-color: var(--line);
+  box-shadow: 0 1px 40px rgba(0,0,0,.5);
+}
+.nl { display: flex; align-items: center; text-decoration: none }
+.nl img { height: 46px; width: auto }
+.nlinks { display: flex; list-style: none; gap: 30px; align-items: center }
+.nlinks a {
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-decoration: none;
+  position: relative;
+  transition: color .25s;
+}
+.nlinks a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px; left: 0; right: 0;
+  height: 1px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transition: transform .25s var(--ease);
+}
+.nlinks a:hover, .nlinks a.act { color: var(--cream) }
+.nlinks a:hover::after, .nlinks a.act::after { transform: scaleX(1) }
+.nr { display: flex; align-items: center; gap: 18px }
+.nph { font-size: 10px; letter-spacing: .12em; color: var(--muted) }
+
+/* mobile nav */
+.burger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px }
+.burger span { display: block; width: 21px; height: 1px; background: var(--cream); transition: .25s }
+#mob {
+  display: none; position: fixed; inset: 0;
+  background: var(--bg2); z-index: 200;
+  flex-direction: column; align-items: center; justify-content: center; gap: 28px;
+}
+#mob.open { display: flex }
+.mob-x { position: absolute; top: 22px; right: 22px; background: none; border: none; color: var(--muted); font-size: 18px; cursor: pointer }
+#mob a {
+  font-family: var(--f-serif);
+  font-size: 34px;
+  font-weight: 300;
+  letter-spacing: .12em;
+  color: var(--cream);
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color .2s;
+}
+#mob a:hover { color: var(--gold) }
+
+/* ── Footer ─────────── */
+footer { border-top: 1px solid var(--line); padding: 64px 0 32px; background: var(--bg2) }
+.ft { display: grid; grid-template-columns: 1.5fr repeat(3,1fr); gap: 44px; padding-bottom: 48px; border-bottom: 1px solid var(--line); margin-bottom: 26px }
+.ft-logo img { height: 44px; width: auto; margin-bottom: 16px }
+.ft-desc { font-size: 13px; color: var(--muted); line-height: 1.8; max-width: 250px }
+.ft-socs { display: flex; gap: 8px; margin-top: 20px }
+.ft-soc {
+  width: 34px; height: 34px;
+  border: 1px solid var(--gold-border);
+  border-radius: 2px;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--muted); text-decoration: none;
+  transition: .25s;
+}
+.ft-soc svg { width: 13px; height: 13px; fill: currentColor }
+.ft-soc:hover { background: var(--gold-dim); color: var(--gold); border-color: var(--gold) }
+.ft-col h5 {
+  font-family: var(--f-sans);
+  font-size: 9px; font-weight: 400;
+  letter-spacing: .28em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 16px;
+}
+.ft-col ul { list-style: none }
+.ft-col li { margin-bottom: 9px }
+.ft-col a { font-size: 12.5px; color: var(--muted); text-decoration: none; transition: color .2s }
+.ft-col a:hover { color: var(--cream) }
+.ft-ci { display: flex; align-items: flex-start; gap: 8px; margin-bottom: 9px }
+.ft-ci span { color: var(--gold); font-size: 11px; margin-top: 2px; flex-shrink: 0 }
+.ft-ci a, .ft-ci p { font-size: 12px; color: var(--muted); text-decoration: none }
+.ft-ci a:hover { color: var(--cream) }
+.ft-bot { display: flex; align-items: center; justify-content: space-between; font-size: 11px; color: var(--muted); letter-spacing: .04em }
+.ft-bl { display: flex; gap: 16px }
+.ft-bl a { color: var(--muted); text-decoration: none }
+.ft-bl a:hover { color: var(--cream) }
+
+/* ── WhatsApp float ─── */
+.wa-btn {
+  position: fixed; bottom: 26px; right: 26px; z-index: 90;
+  width: 52px; height: 52px;
+  background: #25D366; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 4px 20px rgba(37,211,102,.3);
+  animation: wapulse 3s ease-in-out infinite;
+  transition: transform .2s;
+}
+.wa-btn:hover { transform: scale(1.1); animation: none }
+.wa-btn svg { width: 25px; height: 25px; fill: #fff }
+@keyframes wapulse {
+  0%,60%,100% { box-shadow: 0 4px 20px rgba(37,211,102,.3) }
+  30% { box-shadow: 0 4px 28px rgba(37,211,102,.55), 0 0 0 7px rgba(37,211,102,.08) }
+}
+
+/* ── Scroll reveal ───── */
+.rv { opacity: 0; transform: translateY(20px); transition: opacity .65s ease, transform .65s ease }
+.rv.lft { transform: translateX(-26px) }
+.rv.rgt { transform: translateX(26px) }
+.rv.vis, .rv.lft.vis, .rv.rgt.vis { opacity: 1; transform: none }
+.rv.fb, .no-js .rv { opacity: 1; transform: none }
+.d1{transition-delay:.05s}.d2{transition-delay:.15s}.d3{transition-delay:.25s}
+.d4{transition-delay:.35s}.d5{transition-delay:.45s}.d6{transition-delay:.55s}
+
+/* ── Cards ─────────── */
+.card {
+  background: var(--bg3);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  padding: 32px;
+  transition: border-color .3s var(--ease), transform .3s var(--ease);
+}
+.card:hover { border-color: var(--gold-border); transform: translateY(-3px) }
+.card-n {
+  font-family: var(--f-serif);
+  font-size: 11px;
+  letter-spacing: .28em;
+  color: var(--gold);
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+/* ── Forms ──────────── */
+.fc { background: var(--bg3); border: 1px solid var(--line); border-radius: var(--r-lg); padding: 40px }
+.fg { display: flex; flex-direction: column; gap: 7px; margin-bottom: 16px }
+.fg2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px }
+label { font-size: 9.5px; font-weight: 400; letter-spacing: .22em; text-transform: uppercase; color: var(--muted) }
+input, select, textarea {
+  background: var(--bg4);
+  border: 1px solid rgba(240,235,224,.1);
+  border-radius: var(--r);
+  padding: 12px 15px;
+  color: var(--cream);
+  font-family: var(--f-sans);
+  font-size: 14px;
+  font-weight: 300;
+  outline: none;
+  width: 100%;
+  transition: border-color .2s;
+}
+input:focus, select:focus, textarea:focus { border-color: var(--gold-border) }
+textarea { min-height: 110px; resize: vertical }
+select option { background: var(--bg4) }
+
+/* ── Breadcrumb ──────── */
+.bc { list-style: none; display: flex; align-items: center; gap: 7px; margin-bottom: 22px }
+.bc li { font-size: 10.5px; color: var(--muted); letter-spacing: .1em }
+.bc li::after { content: '·'; margin-left: 7px; opacity: .35 }
+.bc li:last-child::after { display: none }
+.bc a { color: var(--muted); text-decoration: none }
+.bc a:hover { color: var(--gold) }
+.bc .cur { color: var(--gold) }
+
+/* ── Page hero ───────── */
+.ph {
+  position: relative;
+  padding: calc(68px + clamp(56px,8vw,96px)) 0 clamp(56px,8vw,96px);
+  overflow: hidden;
+}
+.ph::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse 90% 80% at 50% -10%, rgba(201,168,76,.07) 0%, transparent 70%);
+  pointer-events: none;
+}
+.ph::after {
+  content: '';
+  position: absolute;
+  top: 68px; left: 0; right: 0;
+  height: 1px;
+  background: var(--line);
+}
+.ph-in { position: relative; z-index: 1 }
+
+/* ── Quote badge ──────── */
+.quote-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--gold-dim);
+  border: 1px solid var(--gold-border);
+  border-radius: 100px;
+  padding: 8px 18px;
+  font-size: 10.5px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.quote-badge::before { content: '✦'; font-size: 8px }
+
+@media (max-width: 1024px) {
+  .ft { grid-template-columns: 1fr 1fr; gap: 32px }
+  .grid3 { grid-template-columns: repeat(2, 1fr) }
+}
+@media (max-width: 768px) {
+  .nlinks, .nph { display: none }
+  .burger { display: flex }
+  .ft { grid-template-columns: 1fr }
+  .fg2 { grid-template-columns: 1fr }
+  .fc { padding: 24px 18px }
+  .grid2, .grid4 { grid-template-columns: 1fr }
+  .grid3 { grid-template-columns: 1fr }
+}
+
+
+.bk-layout { display: grid; grid-template-columns: 1fr 1.5fr; gap: 56px; align-items: start }
+.bk-sticky { position: sticky; top: 88px }
+.bk-info-card {
+  background: var(--bg3); border: 1px solid var(--line);
+  border-radius: var(--r-lg); padding: 36px; margin-bottom: 18px;
+}
+.bk-info-card img { height: 40px; width: auto; filter: brightness(0) invert(.85) sepia(.6) hue-rotate(10deg) saturate(2); margin-bottom: 20px }
+.bk-info-card h3 { font-family: var(--f-serif); font-size: 22px; color: var(--cream); margin-bottom: 16px }
+.bk-pts { list-style: none; display: flex; flex-direction: column; gap: 12px }
+.bk-pt { display: flex; align-items: flex-start; gap: 10px; font-size: 13.5px; color: var(--muted) }
+.bk-pt::before { content: '—'; color: var(--gold); flex-shrink: 0; opacity: .7 }
+.ok { display: none; text-align: center; padding: 60px 20px }
+.ok-icon { font-size: 52px; margin-bottom: 16px }
+.ok h3 { font-family: var(--f-serif); font-size: 32px; color: var(--gold); margin-bottom: 10px }
+.ok p { font-size: 14px; color: var(--muted); max-width: 400px; margin: 0 auto }
+@media (max-width: 1024px) {
+  .bk-layout { grid-template-columns: 1fr }
+  .bk-sticky { position: static }
+}
+
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=Outfit:wght@200;300;400;500;600&display=swap"/>
+</head>
+<body>
+<div id="mob">
+  <button class="mob-x" onclick="closeMob()">&#10005;</button>
+  <a href="index.html" onclick="closeMob()">Home</a><a href="about.html" onclick="closeMob()">About</a><a href="services.html" onclick="closeMob()">Services</a><a href="gallery.html" onclick="closeMob()">Gallery</a><a href="contact.html" onclick="closeMob()">Contact</a>
+</div>
+<nav id="nav">
+  <a href="index.html" class="nl"><img src="data:image/png;base64,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" alt="SpaceRestore"/></a>
+  <ul class="nlinks"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact</a></li></ul>
+  <div class="nr">
+    <span class="nph">&#9742;&nbsp;09035398843</span>
+    <a href="booking.html" class="btn btn-gold btn-sm">Book Now</a>
+  </div>
+  <div class="burger" onclick="openMob()"><span></span><span></span><span></span></div>
+</nav>
+<section class="ph">
+  <div class="ph-in wrap">
+    <ul class="bc"><li><a href="index.html">Home</a></li><li class="cur">Book a Clean</li></ul>
+    <span class="tag">Schedule a Service</span>
+    <h1 class="h1 rv" style="margin-top:14px;color:var(--cream)">Book a <em style="font-style:italic;color:var(--gold)">Cleaning</em></h1>
+    <div class="rule"></div>
+    <p class="rv d1" style="color:var(--muted);max-width:480px;font-size:15.5px;line-height:1.8">Fill in the form and we&rsquo;ll confirm your booking and provide a custom quote within the hour.</p>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap bk-layout">
+    <!-- Sidebar -->
+    <div class="bk-sticky rv lft">
+      <div class="bk-info-card">
+        <img src="data:image/png;base64,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" alt="SpaceRestore"/>
+        <h3>Why Book with SpaceRestore?</h3>
+        <ul class="bk-pts">
+          <li>Custom quote provided within 1 hour</li>
+          <li>Same-day and next-day bookings available</li>
+          <li>Coverage across all of Delta State</li>
+          <li>Eco-friendly — safe for kids and pets</li>
+          <li>Uniformed, vetted, professional staff</li>
+          <li>100% satisfaction guarantee</li>
+        </ul>
+      </div>
+      <div style="background:var(--gold);border-radius:var(--r-lg);padding:28px;text-align:center">
+        <h4 style="font-family:var(--f-serif);font-size:20px;color:var(--bg);margin-bottom:8px">Prefer WhatsApp?</h4>
+        <p style="font-size:13px;color:rgba(7,16,31,.7);margin-bottom:18px">Speak directly with our team for same-day or urgent bookings.</p>
+        <a href="tel:09035398843" class="btn btn-ghost btn-sm btn-wide" style="margin-bottom:10px;border-color:rgba(7,16,31,.2);color:var(--bg)">&#9742;&nbsp;09035398843</a>
+        <a href="https://wa.me/2349035398843?text=Hello%20SpaceRestore!%20I%27d%20like%20to%20book%20a%20cleaning%20service." class="btn btn-wide btn-sm" style="background:rgba(7,16,31,.15);color:var(--bg);border-radius:2px;font-size:10px;letter-spacing:.2em;text-transform:uppercase;justify-content:center;display:flex;align-items:center;gap:8px;padding:12px 20px;text-decoration:none" target="_blank">&#128172;&nbsp;WhatsApp Us</a>
+      </div>
+    </div>
+
+    <!-- Form -->
+    <div class="rv rgt">
+      <div class="fc">
+        <div id="okMsg" class="ok">
+          <div class="ok-icon">&#9989;</div>
+          <h3>Booking Request Sent!</h3>
+          <p>Our team will contact you within the hour to confirm your booking and provide a custom quote.</p>
+          <div style="margin-top:28px"><a href="index.html" class="btn btn-outline">Back to Homepage</a></div>
+        </div>
+        <form id="bkForm" onsubmit="submitBk(event)">
+          <h3 style="font-family:var(--f-serif);font-size:28px;color:var(--cream);margin-bottom:6px">Request a Booking</h3>
+          <p style="font-size:13.5px;color:var(--muted);margin-bottom:30px">Complete the form and we&rsquo;ll be in touch with a quote within the hour.</p>
+          <div class="fg2">
+            <div class="fg"><label>Full Name *</label><input type="text" name="name" placeholder="Your full name" required/></div>
+            <div class="fg"><label>Phone Number *</label><input type="tel" name="phone" placeholder="e.g. 0803 000 0000" required/></div>
+          </div>
+          <div class="fg"><label>Email Address</label><input type="email" name="email" placeholder="yourname@email.com"/></div>
+          <div class="fg"><label>Property Address *</label><input type="text" name="address" placeholder="Full address of the property" required/></div>
+          <div class="fg2">
+            <div class="fg">
+              <label>City / Area *</label>
+              <select name="city" required>
+                <option value="">Select city</option>
+                <option>Warri</option><option>Effurun</option><option>Asaba</option>
+                <option>Sapele</option><option>Ughelli</option><option>Agbor</option>
+                <option>Abraka</option><option>Kwale</option><option>Ozoro</option>
+                <option>Other (Delta State)</option>
+              </select>
+            </div>
+            <div class="fg">
+              <label>Service Type *</label>
+              <select id="svcSel" name="service" required>
+                <option value="">Select service</option>
+                <option>Home Cleaning</option><option>Office Cleaning</option>
+                <option>Deep Cleaning</option><option>Post-Construction Cleaning</option>
+                <option>Move-In / Move-Out Cleaning</option><option>Custom / Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="fg2">
+            <div class="fg"><label>Preferred Date *</label><input type="date" name="date" required/></div>
+            <div class="fg">
+              <label>Preferred Time</label>
+              <select name="time">
+                <option value="">Any time</option>
+                <option>Morning (7am&ndash;10am)</option><option>Mid-morning (10am&ndash;12pm)</option>
+                <option>Afternoon (12pm&ndash;3pm)</option><option>Late afternoon (3pm&ndash;6pm)</option>
+              </select>
+            </div>
+          </div>
+          <div class="fg"><label>Property Size / Details</label><input type="text" name="size" placeholder="e.g. 3-bedroom flat, approx 150sqm"/></div>
+          <div class="fg"><label>Message / Special Requests</label><textarea name="message" placeholder="Any specific requirements, access notes or special instructions..."></textarea></div>
+          <button type="submit" id="bkBtn" class="btn btn-gold btn-wide" style="font-size:11px;margin-top:4px">Send Booking Request &#8594;</button>
+          <p id="bkErr" style="display:none;font-size:12.5px;color:var(--err);text-align:center;margin-top:12px">Something went wrong. Please try again or WhatsApp us directly.</p>
+          <p style="font-size:11.5px;color:var(--muted);text-align:center;margin-top:14px">&#128274; Your information is only used to process your booking request.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="ft">
+      <div>
+        <div class="ft-logo"><a href="index.html"><img src="data:image/png;base64,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" alt="SpaceRestore"/></a></div>
+        <p class="ft-desc">Premium professional cleaning services in Warri and across Delta State, Nigeria. We restore, refresh and elevate every space.</p>
+        <div class="ft-socs">
+          <a href="https://www.instagram.com/spacerestore_ng" class="ft-soc" target="_blank" rel="noopener" title="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+          <a href="https://www.tiktok.com/@spacerestore_ng" class="ft-soc" target="_blank" rel="noopener" title="TikTok"><svg viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+          <a href="https://wa.me/2349035398843?text=Hello%20SpaceRestore!%20I%27d%20like%20to%20enquire%20about%20your%20services." class="ft-soc" target="_blank" rel="noopener" title="WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+        </div>
+      </div>
+      <div class="ft-col">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="services.html">Home Cleaning</a></li>
+          <li><a href="services.html">Office Cleaning</a></li>
+          <li><a href="services.html">Deep Cleaning</a></li>
+          <li><a href="services.html">Post-Construction</a></li>
+          <li><a href="services.html">Move-In / Move-Out</a></li>
+        </ul>
+      </div>
+      <div class="ft-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="booking.html">Book a Clean</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="ft-col">
+        <h5>Contact</h5>
+        <div class="ft-ci"><span>&#9742;</span><a href="tel:09035398843">09035398843</a></div>
+        <div class="ft-ci"><span>&#9993;</span><a href="mailto:spacerestoreservices@gmail.com">spacerestoreservices&#64;gmail&#46;com</a></div>
+        <div class="ft-ci"><span>&#9679;</span><p>Warri, Delta State, Nigeria</p></div>
+        <div class="ft-ci"><span>&#9679;</span><p>Mon&ndash;Sat: 7am&ndash;7pm</p></div>
+        <div style="margin-top:18px"><a href="booking.html" class="btn btn-gold btn-sm">Book Now &#8594;</a></div>
+      </div>
+    </div>
+    <div class="ft-bot">
+      <p>&copy; 2026 SpaceRestore Cleaning Services &mdash; Warri, Delta State &nbsp;&#183;&nbsp; <span style="color:var(--gold)">...elevate every space</span></p>
+      <div class="ft-bl"><a href="#">Privacy</a><a href="#">Terms</a></div>
+    </div>
+  </div>
+</footer>
+<a href="https://wa.me/2349035398843?text=Hello%20SpaceRestore!%20I%27d%20like%20to%20enquire%20about%20your%20services." class="wa-btn" target="_blank" title="WhatsApp us"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+<script>
+
+// Nav scroll
+const nav = document.getElementById('nav');
+const onScroll = () => nav?.classList.toggle('sc', scrollY > 40);
+addEventListener('scroll', onScroll, {passive:true});
+onScroll();
+
+// Mobile nav
+const openMob = () => document.getElementById('mob')?.classList.add('open');
+const closeMob = () => document.getElementById('mob')?.classList.remove('open');
+
+// Scroll reveal
+const rvObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting) { e.target.classList.add('vis'); rvObs.unobserve(e.target) } });
+}, { threshold: 0.06, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.rv').forEach(el => rvObs.observe(el));
+
+// Fallback for slow connections
+setTimeout(() => {
+  document.querySelectorAll('.rv:not(.vis)').forEach(el => el.classList.add('fb'));
+}, 200);
+
+
+async function submitBk(e) {
+  e.preventDefault();
+  const btn = document.getElementById('bkBtn');
+  const err = document.getElementById('bkErr');
+  btn.textContent = 'Sending...'; btn.disabled = true; err.style.display = 'none';
+  try {
+    const r = await fetch('https://formspree.io/f/xeerarey', {
+      method: 'POST', body: new FormData(e.target),
+      headers: { 'Accept': 'application/json' }
+    });
+    if (r.ok) {
+      document.getElementById('bkForm').style.display = 'none';
+      document.getElementById('okMsg').style.display = 'block';
+    } else throw new Error('fail');
+  } catch(ex) {
+    btn.textContent = 'Send Booking Request →'; btn.disabled = false; err.style.display = 'block';
+  }
+}
+const sp = document.getElementById('svcSel');
+const up = new URLSearchParams(location.search);
+if (up.get('service') && sp) {
+  for (let i = 0; i < sp.options.length; i++) {
+    if (sp.options[i].value === up.get('service')) { sp.selectedIndex = i; break; }
+  }
+}
+
+</script>
+</body></html>
